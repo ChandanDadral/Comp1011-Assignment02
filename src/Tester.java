@@ -4,6 +4,7 @@
  * @author Chandan Dadral
  * @Version February 04, 2015
  *This class creates a SuperHero object and calls its showPowers and fight methods.
+ *Also Tests the Funcationality of SuperHero Class
  *
  */
 public class Tester {

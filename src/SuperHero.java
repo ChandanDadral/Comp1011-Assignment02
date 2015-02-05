@@ -50,7 +50,7 @@ public class SuperHero extends Hero {
 		Powers.add("Weather Control");
 		
 		//Using the For Loop 
-		for(int i=0; i <3; i++){
+		for(int i=0; i<3; i++){
 		
 			// Taking Random Power from the Powers Array list
 			int powerVariable = (int)(Math.random() * Powers.size());
@@ -63,4 +63,24 @@ public class SuperHero extends Hero {
 			
 		}
 	}
+	//PUBLIC METHOD ----------------------------------------
+	/**
+	 * This Method Prints the Powers that are Selected to Array.
+	 * It Prints the Values using For Loop
+	 */
+	public void showPowers()
+	{
+		
+		System.out.println(this.name + " has powers :  ");
+		System.out.println("---------------------------------------------");
+		//loop through all of the SuperHero's powers, printing out each one
+		for (String show : superPowers)
+		{
+			System.out.println(show);
+		} 
+		
+		System.out.println("---------------------------------------------");
+		
+	}//end of ShowPowers
 	
+}//end of SuperHero Class
