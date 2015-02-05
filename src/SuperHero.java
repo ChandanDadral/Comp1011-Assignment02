@@ -31,4 +31,36 @@ public class SuperHero extends Hero {
 		generateRandomPowers();
 	}
 	
-}
+	//PRIVATE METHOD -----------------------------------------
+	/**
+	 * This Method adds the powers to ArrayList Powers and then then adds identical power
+	 * to SuperPower Array . It removes the power from ArrayList once it has added to Array
+	 */
+	private void generateRandomPowers()
+	{
+		//Creating Array list named as Powers
+		ArrayList<String> Powers = new ArrayList<String>();
+		
+		//Adding the powers to the Array list
+		Powers.add("Super Speed");
+		Powers.add("Super Strength");
+		Powers.add("Body Armour");
+		Powers.add("Flight");
+		Powers.add("Fire Generation");
+		Powers.add("Weather Control");
+		
+		//Using the For Loop 
+		for(int i=0; i <3; i++){
+		
+			// Taking Random Power from the Powers Array list
+			int powerVariable = (int)(Math.random() * Powers.size());
+			
+			//Setting the Powers to SuperPower Array
+			superPowers[i] = Powers.get(powerVariable);
+			
+			//removing the selected power from the ArrayList
+			Powers.remove(powerVariable);
+			
+		}
+	}
+	
